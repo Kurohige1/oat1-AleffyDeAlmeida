@@ -1,0 +1,15 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #111715; color: #f6faf8; }
+.gallery-page { width: min(1200px, 92%); margin: auto; padding: 70px 0; }
+.gallery-page > header { margin-bottom: 35px; }
+.gallery-page header span { color: #86d0b1; font-size: .75rem; font-weight: 800; letter-spacing: .18em; }
+.gallery-page h1 { margin: 10px 0; font-size: clamp(2rem, 5vw, 4rem); }
+.gallery-page header p { color: #9aa9a4; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+.photo { position: relative; overflow: hidden; aspect-ratio: 4 / 3; border-radius: 16px; background: #28312e; }
+.photo img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .5s ease, filter .5s ease; }
+.photo::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.38); opacity: 0; transition: opacity .35s ease; }
+.photo figcaption { position: absolute; z-index: 2; left: 22px; bottom: 20px; color: #fff; font-size: 1.15rem; font-weight: 700; opacity: 0; transform: translateY(20px); transition: opacity .35s ease, transform .35s ease; }
+.photo:hover img { transform: scale(1.08); filter: brightness(.72); }
+.photo:hover::after, .photo:hover figcaption { opacity: 1; }
+.photo:hover figcaption { transform: translateY(0); }

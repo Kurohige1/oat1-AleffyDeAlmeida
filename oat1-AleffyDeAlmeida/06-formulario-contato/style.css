@@ -1,0 +1,23 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; min-height: 100vh; color: #1b2925; background: #f4f7f5; }
+.contact-page { width: min(1050px, 92%); margin: auto; padding: 75px 0; }
+.intro { max-width: 680px; margin-bottom: 42px; }
+.intro span { color: #26745f; font-size: .75rem; font-weight: 800; letter-spacing: .16em; }
+.intro h1 { margin: 10px 0; font-size: clamp(2rem, 5vw, 3.7rem); line-height: 1.05; }
+.intro p { color: #6d7c75; line-height: 1.6; }
+.contact-form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px 20px; padding: 34px; border-radius: 22px; background: #fff; box-shadow: 0 20px 50px rgba(30,50,42,.09); }
+.field { position: relative; }
+.field input, .field textarea, .field select { width: 100%; border: 1px solid #d7e0db; border-radius: 11px; padding: 18px 14px 8px; font: inherit; color: #1b2925; background: #fff; outline: none; transition: border-color .25s ease, box-shadow .25s ease; }
+.field input { height: 58px; }
+.field textarea { min-height: 150px; resize: vertical; }
+.field select { height: 58px; padding-top: 18px; }
+.field label { position: absolute; left: 14px; top: 18px; color: #87938d; pointer-events: none; transition: transform .2s ease, font-size .2s ease, color .2s ease, top .2s ease; background: #fff; padding: 0 3px; }
+.field input:focus, .field textarea:focus, .field select:focus { border-color: #2b8a6e; box-shadow: 0 0 0 4px rgba(43,138,110,.10); }
+.field input:focus + label, .field input:not(:placeholder-shown) + label, .field textarea:focus + label, .field textarea:not(:placeholder-shown) + label { top: -8px; font-size: .74rem; color: #2b8a6e; }
+.field input:invalid:not(:placeholder-shown), .field textarea:invalid:not(:placeholder-shown) { border-color: #d45d5d; }
+.field input:valid:not(:placeholder-shown), .field textarea:valid:not(:placeholder-shown) { border-color: #54a886; }
+.select-label { top: -8px !important; font-size: .74rem; }
+.full { grid-column: 1 / -1; }
+.submit { border: 0; padding: 15px; border-radius: 11px; color: #fff; background: #236a57; font-weight: 700; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+.submit:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(35,106,87,.2); }
+@media (max-width: 700px) { .contact-form { grid-template-columns: 1fr; padding: 24px; } .full { grid-column: auto; } }
