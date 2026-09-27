@@ -16,4 +16,4 @@ Pastas:
 
 Cada projeto possui `index.html` e `style.css`.
 
-Observação: alguns projetos usam imagens externas para demonstração visual. Se for necessário entregar tudo offline, substitua essas URLs por imagens locais dentro de cada pasta.
+
